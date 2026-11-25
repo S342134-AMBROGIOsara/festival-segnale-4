@@ -1,0 +1,353 @@
+
+/* ========================================
+   FONT GOOGLE
+======================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Bowlby+One+SC&family=DM+Sans:wght@400;500;600;700;800&display=swap');
+
+
+/* ========================================
+   COLORI E VARIABILI
+======================================== */
+
+:root {
+  --colore-primario: #EFFF00;
+  --colore-primario-scuro: #D6E600;
+  --colore-sfondo: #35105C;
+  --colore-sfondo-schede: #492071;
+  --colore-testo: #FFFDF5;
+  --colore-secondario: #D4CCDF;
+  --colore-bordo: #68458B;
+
+  --font-testo: 'DM Sans', sans-serif;
+  --font-titoli: 'Bowlby One SC', sans-serif;
+}
+
+
+/* ========================================
+   IMPOSTAZIONI GENERALI
+======================================== */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--colore-sfondo);
+  color: var(--colore-testo);
+  font-family: var(--font-testo);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+
+/* ========================================
+   COLLEGAMENTI
+======================================== */
+
+a {
+  color: var(--colore-primario);
+}
+
+a:hover {
+  text-decoration-thickness: 3px;
+}
+
+a:focus-visible {
+  outline: 3px solid var(--colore-primario);
+  outline-offset: 4px;
+}
+
+
+/* ========================================
+   CONTENITORE
+======================================== */
+
+.container {
+  width: 92%;
+  max-width: 68rem;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER E LOGO
+======================================== */
+
+.site-header {
+  padding: 1.25rem 0;
+  border-bottom: 4px solid var(--colore-primario);
+}
+
+.brand {
+  display: inline-block;
+  color: var(--colore-primario);
+  font-family: var(--font-titoli);
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.brand span {
+  display: block;
+  margin-top: 0.25rem;
+  color: var(--colore-secondario);
+  font-family: var(--font-testo);
+  font-size: 0.875rem;
+  font-weight: normal;
+}
+
+
+/* ========================================
+   NAVIGAZIONE
+======================================== */
+
+nav {
+  margin-top: 1rem;
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 1rem;
+  padding: 0.25rem 0;
+  color: var(--colore-testo);
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: var(--colore-primario);
+}
+
+nav a[aria-current="page"] {
+  color: var(--colore-primario);
+  font-weight: bold;
+}
+
+
+/* ========================================
+   INTRODUZIONE
+======================================== */
+
+.intro {
+  padding: 3rem 0 1rem;
+}
+
+.eyebrow,
+.event-meta {
+  color: var(--colore-secondario);
+  font-size: 0.875rem;
+  font-weight: bold;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+
+/* ========================================
+   TIPOGRAFIA
+======================================== */
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-titoli);
+  font-weight: normal;
+  line-height: 1.05;
+  color: var(--colore-primario);
+}
+
+h1 {
+  max-width: 18ch;
+  margin: 0.75rem 0 1.25rem;
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  line-height: 0.95;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+h3 {
+  margin: 0.5rem 0 0.75rem;
+  font-size: 1.7rem;
+}
+
+.lead {
+  max-width: 48ch;
+  color: var(--colore-testo);
+  font-size: 1.25rem;
+}
+
+.reading-text {
+  max-width: 65ch;
+  color: var(--colore-testo);
+}
+
+
+/* ========================================
+   PULSANTI
+======================================== */
+
+.button-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  border-radius: 0.35rem;
+  background: var(--colore-primario);
+  color: var(--colore-sfondo);
+  font-weight: 800;
+  text-decoration: none;
+  letter-spacing: 0.04em;
+}
+
+.button-link:hover {
+  background: var(--colore-primario-scuro);
+  color: var(--colore-sfondo);
+}
+
+
+/* ========================================
+   SEZIONI CONTENUTO
+======================================== */
+
+.content-section {
+  margin: 2rem 0 3rem;
+}
+
+.festival-image {
+  display: block;
+  width: 100%;
+  max-width: 54rem;
+  height: auto;
+  margin-top: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+
+/* ========================================
+   LUOGHI DEL FESTIVAL
+======================================== */
+
+.venues {
+  padding-left: 1.25rem;
+  color: var(--colore-testo);
+}
+
+.venues li {
+  margin-bottom: 0.5rem;
+}
+
+
+/* ========================================
+   GRIGLIA EVENTI
+======================================== */
+
+.event-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+
+/* ========================================
+   SCHEDE EVENTI
+======================================== */
+
+.event-card {
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  border: 1px solid var(--colore-bordo);
+  border-radius: 0.5rem;
+  background: var(--colore-sfondo-schede);
+}
+
+.event-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.event-body {
+  padding: 1.25rem;
+}
+
+.event-body h3 {
+  color: var(--colore-primario);
+}
+
+.event-body p {
+  color: var(--colore-testo);
+}
+
+.event-body p:last-child {
+  margin-bottom: 0;
+}
+
+.event-place {
+  color: var(--colore-secondario);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.site-footer {
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--colore-bordo);
+  color: var(--colore-secondario);
+  font-size: 0.875rem;
+}
+
+
+/* ========================================
+   ACCESSIBILITÀ
+======================================== */
+
+.skip-link {
+  position: absolute;
+  top: -6rem;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--colore-primario);
+  color: var(--colore-sfondo);
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+
+/* ========================================
+   VERSIONE MOBILE
+======================================== */
+
+@media (max-width: 599px) {
+
+  .event-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  nav a {
+    margin-right: 0.6rem;
+  }
+
+}
